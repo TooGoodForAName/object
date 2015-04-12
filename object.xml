@@ -205,13 +205,13 @@
                                                                         </value>
                                                                         <value name="B">
                                                                           <block type="math_number" id="633">
-                                                                            <field name="NUM">60</field>
+                                                                            <field name="NUM">35</field>
                                                                           </block>
                                                                         </value>
                                                                       </block>
                                                                     </value>
                                                                     <statement name="DO2">
-                                                                      <block type="movement_forward" id="712"></block>
+                                                                      <block type="movement_left" id="722"></block>
                                                                     </statement>
                                                                     <value name="IF3">
                                                                       <block type="logic_compare" id="370" inline="true">
@@ -223,13 +223,13 @@
                                                                         </value>
                                                                         <value name="B">
                                                                           <block type="math_number" id="372">
-                                                                            <field name="NUM">60</field>
+                                                                            <field name="NUM">35</field>
                                                                           </block>
                                                                         </value>
                                                                       </block>
                                                                     </value>
                                                                     <statement name="DO3">
-                                                                      <block type="movement_forward" id="713"></block>
+                                                                      <block type="movement_right" id="721"></block>
                                                                     </statement>
                                                                     <next>
                                                                       <block type="robot_delay" id="311" inline="true">
