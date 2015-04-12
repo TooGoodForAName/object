@@ -138,7 +138,7 @@
                                                                 </value>
                                                                 <next>
                                                                   <block type="controls_if" id="244" inline="false">
-                                                                    <mutation elseif="3" else="1"></mutation>
+                                                                    <mutation elseif="3"></mutation>
                                                                     <value name="IF0">
                                                                       <block type="logic_compare" id="251" inline="true">
                                                                         <field name="OP">LT</field>
@@ -197,7 +197,7 @@
                                                                     </statement>
                                                                     <value name="IF2">
                                                                       <block type="logic_compare" id="373" inline="true">
-                                                                        <field name="OP">LT</field>
+                                                                        <field name="OP">GT</field>
                                                                         <value name="A">
                                                                           <block type="sensor_light" id="710">
                                                                             <field name="LIGHT">LEFT</field>
@@ -205,7 +205,7 @@
                                                                         </value>
                                                                         <value name="B">
                                                                           <block type="math_number" id="633">
-                                                                            <field name="NUM">80</field>
+                                                                            <field name="NUM">60</field>
                                                                           </block>
                                                                         </value>
                                                                       </block>
@@ -215,7 +215,7 @@
                                                                     </statement>
                                                                     <value name="IF3">
                                                                       <block type="logic_compare" id="370" inline="true">
-                                                                        <field name="OP">LT</field>
+                                                                        <field name="OP">GT</field>
                                                                         <value name="A">
                                                                           <block type="sensor_light" id="711">
                                                                             <field name="LIGHT">RIGHT</field>
@@ -223,16 +223,13 @@
                                                                         </value>
                                                                         <value name="B">
                                                                           <block type="math_number" id="372">
-                                                                            <field name="NUM">80</field>
+                                                                            <field name="NUM">60</field>
                                                                           </block>
                                                                         </value>
                                                                       </block>
                                                                     </value>
                                                                     <statement name="DO3">
                                                                       <block type="movement_forward" id="713"></block>
-                                                                    </statement>
-                                                                    <statement name="ELSE">
-                                                                      <block type="movement_forward" id="309"></block>
                                                                     </statement>
                                                                     <next>
                                                                       <block type="robot_delay" id="311" inline="true">
