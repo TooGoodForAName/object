@@ -94,8 +94,8 @@
                                             <next>
                                               <block type="oled_drawnumber" id="97" inline="true">
                                                 <value name="NUMBER">
-                                                  <block type="sensor_object" id="98">
-                                                    <field name="OBJECT">LEFTSIDE</field>
+                                                  <block type="sensor_light" id="656">
+                                                    <field name="LIGHT">LEFT</field>
                                                   </block>
                                                 </value>
                                                 <next>
@@ -113,8 +113,8 @@
                                                     <next>
                                                       <block type="oled_drawnumber" id="95" inline="true">
                                                         <value name="NUMBER">
-                                                          <block type="sensor_object" id="96">
-                                                            <field name="OBJECT">RIGHTSIDE</field>
+                                                          <block type="sensor_light" id="686">
+                                                            <field name="LIGHT">RIGHT</field>
                                                           </block>
                                                         </value>
                                                         <next>
@@ -198,13 +198,8 @@
                                                                     <value name="IF2">
                                                                       <block type="logic_compare" id="373" inline="true">
                                                                         <field name="OP">LT</field>
-                                                                        <value name="A">
-                                                                          <block type="sensor_object" id="374">
-                                                                            <field name="OBJECT">RIGHTSIDE</field>
-                                                                          </block>
-                                                                        </value>
                                                                         <value name="B">
-                                                                          <block type="math_number" id="375">
+                                                                          <block type="math_number" id="633">
                                                                             <field name="NUM">80</field>
                                                                           </block>
                                                                         </value>
@@ -213,11 +208,6 @@
                                                                     <value name="IF3">
                                                                       <block type="logic_compare" id="370" inline="true">
                                                                         <field name="OP">LT</field>
-                                                                        <value name="A">
-                                                                          <block type="sensor_object" id="371">
-                                                                            <field name="OBJECT">LEFTSIDE</field>
-                                                                          </block>
-                                                                        </value>
                                                                         <value name="B">
                                                                           <block type="math_number" id="372">
                                                                             <field name="NUM">80</field>
@@ -228,11 +218,6 @@
                                                                     <value name="IF4">
                                                                       <block type="logic_compare" id="367" inline="true">
                                                                         <field name="OP">LT</field>
-                                                                        <value name="A">
-                                                                          <block type="sensor_object" id="368">
-                                                                            <field name="OBJECT">REAR</field>
-                                                                          </block>
-                                                                        </value>
                                                                         <value name="B">
                                                                           <block type="math_number" id="369">
                                                                             <field name="NUM">80</field>
@@ -277,7 +262,39 @@
                       </block>
                     </statement>
                     <next>
-                      <block type="movement_stop" id="173"></block>
+                      <block type="oled_setcursor" id="627" inline="true">
+                        <value name="STARTX">
+                          <block type="math_number" id="628">
+                            <field name="NUM">63</field>
+                          </block>
+                        </value>
+                        <value name="STARTY">
+                          <block type="math_number" id="629">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="oled_drawtext" id="626">
+                            <field name="TEXT">Shutting Down</field>
+                            <next>
+                              <block type="robot_delay" id="630" inline="true">
+                                <value name="DELAY">
+                                  <block type="math_number" id="631">
+                                    <field name="NUM">3000</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="oled_cleardisplay" id="632">
+                                    <next>
+                                      <block type="movement_stop" id="173"></block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
                     </next>
                   </block>
                 </next>
