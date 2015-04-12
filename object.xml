@@ -105,7 +105,7 @@
                                                 </value>
                                                 <next>
                                                   <block type="controls_if" id="244" inline="false">
-                                                    <mutation elseif="1" else="1"></mutation>
+                                                    <mutation elseif="4" else="1"></mutation>
                                                     <value name="IF0">
                                                       <block type="logic_compare" id="251" inline="true">
                                                         <field name="OP">LT</field>
@@ -160,6 +160,81 @@
                                                         <next>
                                                           <block type="movement_left" id="291"></block>
                                                         </next>
+                                                      </block>
+                                                    </statement>
+                                                    <value name="IF2">
+                                                      <block type="logic_compare" id="373" inline="true">
+                                                        <field name="OP">LT</field>
+                                                        <value name="A">
+                                                          <block type="sensor_object" id="374">
+                                                            <field name="OBJECT">RIGHTSIDE</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <block type="math_number" id="375">
+                                                            <field name="NUM">80</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <statement name="DO2">
+                                                      <block type="led_select" id="380" inline="true">
+                                                        <field name="ACTION">FLASH</field>
+                                                        <value name="LED">
+                                                          <block type="math_number" id="381">
+                                                            <field name="NUM">4</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </statement>
+                                                    <value name="IF3">
+                                                      <block type="logic_compare" id="370" inline="true">
+                                                        <field name="OP">LT</field>
+                                                        <value name="A">
+                                                          <block type="sensor_object" id="371">
+                                                            <field name="OBJECT">LEFTSIDE</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <block type="math_number" id="372">
+                                                            <field name="NUM">80</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <statement name="DO3">
+                                                      <block type="led_select" id="378" inline="true">
+                                                        <field name="ACTION">FLASH</field>
+                                                        <value name="LED">
+                                                          <block type="math_number" id="379">
+                                                            <field name="NUM">1</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </statement>
+                                                    <value name="IF4">
+                                                      <block type="logic_compare" id="367" inline="true">
+                                                        <field name="OP">LT</field>
+                                                        <value name="A">
+                                                          <block type="sensor_object" id="368">
+                                                            <field name="OBJECT">REAR</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <block type="math_number" id="369">
+                                                            <field name="NUM">80</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <statement name="DO4">
+                                                      <block type="led_select" id="376" inline="true">
+                                                        <field name="ACTION">FLASH</field>
+                                                        <value name="LED">
+                                                          <block type="math_number" id="377">
+                                                            <field name="NUM">3</field>
+                                                          </block>
+                                                        </value>
                                                       </block>
                                                     </statement>
                                                     <statement name="ELSE">
