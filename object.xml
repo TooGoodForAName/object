@@ -43,7 +43,7 @@
                       <block type="oled_drawnumber" id="81" inline="true">
                         <value name="NUMBER">
                           <block type="sensor_object" id="82">
-                            <field name="OBJECT">LEFTFRONT</field>
+                            <field name="OBJECT">RIGHTFRONT</field>
                           </block>
                         </value>
                         <next>
@@ -62,7 +62,7 @@
                               <block type="oled_drawnumber" id="97" inline="true">
                                 <value name="NUMBER">
                                   <block type="sensor_object" id="98">
-                                    <field name="OBJECT">LEFTFRONT</field>
+                                    <field name="OBJECT">LEFTSIDE</field>
                                   </block>
                                 </value>
                                 <next>
@@ -81,9 +81,32 @@
                                       <block type="oled_drawnumber" id="95" inline="true">
                                         <value name="NUMBER">
                                           <block type="sensor_object" id="96">
-                                            <field name="OBJECT">LEFTFRONT</field>
+                                            <field name="OBJECT">RIGHTSIDE</field>
                                           </block>
                                         </value>
+                                        <next>
+                                          <block type="oled_setcursor" id="99" inline="true">
+                                            <value name="STARTX">
+                                              <block type="math_number" id="100">
+                                                <field name="NUM">65</field>
+                                              </block>
+                                            </value>
+                                            <value name="STARTY">
+                                              <block type="math_number" id="101">
+                                                <field name="NUM">65</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="oled_drawnumber" id="102" inline="true">
+                                                <value name="NUMBER">
+                                                  <block type="sensor_object" id="103">
+                                                    <field name="OBJECT">REAR</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
                                       </block>
                                     </next>
                                   </block>
