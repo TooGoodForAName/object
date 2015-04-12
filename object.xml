@@ -25,224 +25,233 @@
           <block type="oled_drawtext" id="609">
             <field name="TEXT">Booting Up</field>
             <next>
-              <block type="controls_whileUntil" id="8" inline="false">
-                <field name="MODE">UNTIL</field>
-                <value name="NUMBER">
-                  <block type="sensor_button" id="15">
-                    <field name="OBJECT">ENTER</field>
+              <block type="robot_delay" id="612" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="613">
+                    <field name="NUM">4000</field>
                   </block>
                 </value>
-                <statement name="DO">
-                  <block type="oled_cleardisplay" id="32">
-                    <next>
-                      <block type="oled_setcursor" id="41" inline="true">
-                        <value name="STARTX">
-                          <block type="math_number" id="48">
-                            <field name="NUM">10</field>
-                          </block>
-                        </value>
-                        <value name="STARTY">
-                          <block type="math_number" id="77">
-                            <field name="NUM">10</field>
-                          </block>
-                        </value>
+                <next>
+                  <block type="controls_whileUntil" id="8" inline="false">
+                    <field name="MODE">UNTIL</field>
+                    <value name="NUMBER">
+                      <block type="sensor_button" id="15">
+                        <field name="OBJECT">ENTER</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="oled_cleardisplay" id="32">
                         <next>
-                          <block type="oled_drawnumber" id="58" inline="true">
-                            <value name="NUMBER">
-                              <block type="sensor_object" id="65">
-                                <field name="OBJECT">LEFTFRONT</field>
+                          <block type="oled_setcursor" id="41" inline="true">
+                            <value name="STARTX">
+                              <block type="math_number" id="48">
+                                <field name="NUM">10</field>
+                              </block>
+                            </value>
+                            <value name="STARTY">
+                              <block type="math_number" id="77">
+                                <field name="NUM">10</field>
                               </block>
                             </value>
                             <next>
-                              <block type="oled_setcursor" id="78" inline="true">
-                                <value name="STARTX">
-                                  <block type="math_number" id="79">
-                                    <field name="NUM">110</field>
-                                  </block>
-                                </value>
-                                <value name="STARTY">
-                                  <block type="math_number" id="80">
-                                    <field name="NUM">10</field>
+                              <block type="oled_drawnumber" id="58" inline="true">
+                                <value name="NUMBER">
+                                  <block type="sensor_object" id="65">
+                                    <field name="OBJECT">LEFTFRONT</field>
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="oled_drawnumber" id="81" inline="true">
-                                    <value name="NUMBER">
-                                      <block type="sensor_object" id="82">
-                                        <field name="OBJECT">RIGHTFRONT</field>
+                                  <block type="oled_setcursor" id="78" inline="true">
+                                    <value name="STARTX">
+                                      <block type="math_number" id="79">
+                                        <field name="NUM">110</field>
+                                      </block>
+                                    </value>
+                                    <value name="STARTY">
+                                      <block type="math_number" id="80">
+                                        <field name="NUM">10</field>
                                       </block>
                                     </value>
                                     <next>
-                                      <block type="oled_setcursor" id="89" inline="true">
-                                        <value name="STARTX">
-                                          <block type="math_number" id="90">
-                                            <field name="NUM">10</field>
-                                          </block>
-                                        </value>
-                                        <value name="STARTY">
-                                          <block type="math_number" id="91">
-                                            <field name="NUM">32</field>
+                                      <block type="oled_drawnumber" id="81" inline="true">
+                                        <value name="NUMBER">
+                                          <block type="sensor_object" id="82">
+                                            <field name="OBJECT">RIGHTFRONT</field>
                                           </block>
                                         </value>
                                         <next>
-                                          <block type="oled_drawnumber" id="97" inline="true">
-                                            <value name="NUMBER">
-                                              <block type="sensor_object" id="98">
-                                                <field name="OBJECT">LEFTSIDE</field>
+                                          <block type="oled_setcursor" id="89" inline="true">
+                                            <value name="STARTX">
+                                              <block type="math_number" id="90">
+                                                <field name="NUM">10</field>
+                                              </block>
+                                            </value>
+                                            <value name="STARTY">
+                                              <block type="math_number" id="91">
+                                                <field name="NUM">32</field>
                                               </block>
                                             </value>
                                             <next>
-                                              <block type="oled_setcursor" id="92" inline="true">
-                                                <value name="STARTX">
-                                                  <block type="math_number" id="93">
-                                                    <field name="NUM">110</field>
-                                                  </block>
-                                                </value>
-                                                <value name="STARTY">
-                                                  <block type="math_number" id="94">
-                                                    <field name="NUM">32</field>
+                                              <block type="oled_drawnumber" id="97" inline="true">
+                                                <value name="NUMBER">
+                                                  <block type="sensor_object" id="98">
+                                                    <field name="OBJECT">LEFTSIDE</field>
                                                   </block>
                                                 </value>
                                                 <next>
-                                                  <block type="oled_drawnumber" id="95" inline="true">
-                                                    <value name="NUMBER">
-                                                      <block type="sensor_object" id="96">
-                                                        <field name="OBJECT">RIGHTSIDE</field>
+                                                  <block type="oled_setcursor" id="92" inline="true">
+                                                    <value name="STARTX">
+                                                      <block type="math_number" id="93">
+                                                        <field name="NUM">110</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="STARTY">
+                                                      <block type="math_number" id="94">
+                                                        <field name="NUM">32</field>
                                                       </block>
                                                     </value>
                                                     <next>
-                                                      <block type="oled_setcursor" id="99" inline="true">
-                                                        <value name="STARTX">
-                                                          <block type="math_number" id="100">
-                                                            <field name="NUM">63</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="STARTY">
-                                                          <block type="math_number" id="101">
-                                                            <field name="NUM">48</field>
+                                                      <block type="oled_drawnumber" id="95" inline="true">
+                                                        <value name="NUMBER">
+                                                          <block type="sensor_object" id="96">
+                                                            <field name="OBJECT">RIGHTSIDE</field>
                                                           </block>
                                                         </value>
                                                         <next>
-                                                          <block type="oled_drawnumber" id="102" inline="true">
-                                                            <value name="NUMBER">
-                                                              <block type="sensor_object" id="103">
-                                                                <field name="OBJECT">REAR</field>
+                                                          <block type="oled_setcursor" id="99" inline="true">
+                                                            <value name="STARTX">
+                                                              <block type="math_number" id="100">
+                                                                <field name="NUM">63</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="STARTY">
+                                                              <block type="math_number" id="101">
+                                                                <field name="NUM">48</field>
                                                               </block>
                                                             </value>
                                                             <next>
-                                                              <block type="controls_if" id="244" inline="false">
-                                                                <mutation elseif="4" else="1"></mutation>
-                                                                <value name="IF0">
-                                                                  <block type="logic_compare" id="251" inline="true">
-                                                                    <field name="OP">LT</field>
-                                                                    <value name="A">
-                                                                      <block type="sensor_object" id="263">
-                                                                        <field name="OBJECT">LEFTFRONT</field>
-                                                                      </block>
-                                                                    </value>
-                                                                    <value name="B">
-                                                                      <block type="math_number" id="264">
-                                                                        <field name="NUM">80</field>
-                                                                      </block>
-                                                                    </value>
+                                                              <block type="oled_drawnumber" id="102" inline="true">
+                                                                <value name="NUMBER">
+                                                                  <block type="sensor_object" id="103">
+                                                                    <field name="OBJECT">REAR</field>
                                                                   </block>
                                                                 </value>
-                                                                <statement name="DO0">
-                                                                  <block type="led_select" id="333" inline="true">
-                                                                    <field name="ACTION">FLASH</field>
-                                                                    <value name="LED">
-                                                                      <block type="math_number" id="340">
-                                                                        <field name="NUM">0</field>
-                                                                      </block>
-                                                                    </value>
-                                                                    <next>
-                                                                      <block type="movement_right" id="262"></block>
-                                                                    </next>
-                                                                  </block>
-                                                                </statement>
-                                                                <value name="IF1">
-                                                                  <block type="logic_compare" id="270" inline="true">
-                                                                    <field name="OP">LT</field>
-                                                                    <value name="A">
-                                                                      <block type="sensor_object" id="271">
-                                                                        <field name="OBJECT">RIGHTFRONT</field>
-                                                                      </block>
-                                                                    </value>
-                                                                    <value name="B">
-                                                                      <block type="math_number" id="272">
-                                                                        <field name="NUM">80</field>
-                                                                      </block>
-                                                                    </value>
-                                                                  </block>
-                                                                </value>
-                                                                <statement name="DO1">
-                                                                  <block type="led_select" id="342" inline="true">
-                                                                    <field name="ACTION">FLASH</field>
-                                                                    <value name="LED">
-                                                                      <block type="math_number" id="343">
-                                                                        <field name="NUM">5</field>
-                                                                      </block>
-                                                                    </value>
-                                                                    <next>
-                                                                      <block type="movement_left" id="291"></block>
-                                                                    </next>
-                                                                  </block>
-                                                                </statement>
-                                                                <value name="IF2">
-                                                                  <block type="logic_compare" id="373" inline="true">
-                                                                    <field name="OP">LT</field>
-                                                                    <value name="A">
-                                                                      <block type="sensor_object" id="374">
-                                                                        <field name="OBJECT">RIGHTSIDE</field>
-                                                                      </block>
-                                                                    </value>
-                                                                    <value name="B">
-                                                                      <block type="math_number" id="375">
-                                                                        <field name="NUM">80</field>
-                                                                      </block>
-                                                                    </value>
-                                                                  </block>
-                                                                </value>
-                                                                <value name="IF3">
-                                                                  <block type="logic_compare" id="370" inline="true">
-                                                                    <field name="OP">LT</field>
-                                                                    <value name="A">
-                                                                      <block type="sensor_object" id="371">
-                                                                        <field name="OBJECT">LEFTSIDE</field>
-                                                                      </block>
-                                                                    </value>
-                                                                    <value name="B">
-                                                                      <block type="math_number" id="372">
-                                                                        <field name="NUM">80</field>
-                                                                      </block>
-                                                                    </value>
-                                                                  </block>
-                                                                </value>
-                                                                <value name="IF4">
-                                                                  <block type="logic_compare" id="367" inline="true">
-                                                                    <field name="OP">LT</field>
-                                                                    <value name="A">
-                                                                      <block type="sensor_object" id="368">
-                                                                        <field name="OBJECT">REAR</field>
-                                                                      </block>
-                                                                    </value>
-                                                                    <value name="B">
-                                                                      <block type="math_number" id="369">
-                                                                        <field name="NUM">80</field>
-                                                                      </block>
-                                                                    </value>
-                                                                  </block>
-                                                                </value>
-                                                                <statement name="ELSE">
-                                                                  <block type="movement_forward" id="309"></block>
-                                                                </statement>
                                                                 <next>
-                                                                  <block type="robot_delay" id="311" inline="true">
-                                                                    <value name="DELAY">
-                                                                      <block type="math_number" id="318">
-                                                                        <field name="NUM">30</field>
+                                                                  <block type="controls_if" id="244" inline="false">
+                                                                    <mutation elseif="4" else="1"></mutation>
+                                                                    <value name="IF0">
+                                                                      <block type="logic_compare" id="251" inline="true">
+                                                                        <field name="OP">LT</field>
+                                                                        <value name="A">
+                                                                          <block type="sensor_object" id="263">
+                                                                            <field name="OBJECT">LEFTFRONT</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="B">
+                                                                          <block type="math_number" id="264">
+                                                                            <field name="NUM">80</field>
+                                                                          </block>
+                                                                        </value>
                                                                       </block>
                                                                     </value>
+                                                                    <statement name="DO0">
+                                                                      <block type="led_select" id="333" inline="true">
+                                                                        <field name="ACTION">FLASH</field>
+                                                                        <value name="LED">
+                                                                          <block type="math_number" id="340">
+                                                                            <field name="NUM">0</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="movement_right" id="262"></block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </statement>
+                                                                    <value name="IF1">
+                                                                      <block type="logic_compare" id="270" inline="true">
+                                                                        <field name="OP">LT</field>
+                                                                        <value name="A">
+                                                                          <block type="sensor_object" id="271">
+                                                                            <field name="OBJECT">RIGHTFRONT</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="B">
+                                                                          <block type="math_number" id="272">
+                                                                            <field name="NUM">80</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <statement name="DO1">
+                                                                      <block type="led_select" id="342" inline="true">
+                                                                        <field name="ACTION">FLASH</field>
+                                                                        <value name="LED">
+                                                                          <block type="math_number" id="343">
+                                                                            <field name="NUM">5</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="movement_left" id="291"></block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </statement>
+                                                                    <value name="IF2">
+                                                                      <block type="logic_compare" id="373" inline="true">
+                                                                        <field name="OP">LT</field>
+                                                                        <value name="A">
+                                                                          <block type="sensor_object" id="374">
+                                                                            <field name="OBJECT">RIGHTSIDE</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="B">
+                                                                          <block type="math_number" id="375">
+                                                                            <field name="NUM">80</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="IF3">
+                                                                      <block type="logic_compare" id="370" inline="true">
+                                                                        <field name="OP">LT</field>
+                                                                        <value name="A">
+                                                                          <block type="sensor_object" id="371">
+                                                                            <field name="OBJECT">LEFTSIDE</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="B">
+                                                                          <block type="math_number" id="372">
+                                                                            <field name="NUM">80</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="IF4">
+                                                                      <block type="logic_compare" id="367" inline="true">
+                                                                        <field name="OP">LT</field>
+                                                                        <value name="A">
+                                                                          <block type="sensor_object" id="368">
+                                                                            <field name="OBJECT">REAR</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="B">
+                                                                          <block type="math_number" id="369">
+                                                                            <field name="NUM">80</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <statement name="ELSE">
+                                                                      <block type="movement_forward" id="309"></block>
+                                                                    </statement>
+                                                                    <next>
+                                                                      <block type="robot_delay" id="311" inline="true">
+                                                                        <value name="DELAY">
+                                                                          <block type="math_number" id="318">
+                                                                            <field name="NUM">30</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </next>
                                                                   </block>
                                                                 </next>
                                                               </block>
@@ -266,11 +275,11 @@
                           </block>
                         </next>
                       </block>
+                    </statement>
+                    <next>
+                      <block type="movement_stop" id="173"></block>
                     </next>
                   </block>
-                </statement>
-                <next>
-                  <block type="movement_stop" id="173"></block>
                 </next>
               </block>
             </next>
