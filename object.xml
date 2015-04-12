@@ -281,7 +281,7 @@
                         </value>
                         <next>
                           <block type="oled_drawtext" id="626">
-                            <field name="TEXT">Shutting Down</field>
+                            <field name="TEXT">Shatting Down</field>
                             <next>
                               <block type="robot_delay" id="630" inline="true">
                                 <value name="DELAY">
